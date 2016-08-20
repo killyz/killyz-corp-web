@@ -1,0 +1,43 @@
+<div class="container-fluid" ng-controller="SupplierController as supplierCtrl">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7 header"><h3 class="header-child">Suppliers</h3></div>
+        <div class="col-md-1 new-button-div">
+            <span>
+                <button type="button" class="btn btn-success btn-sm" ng-click="supplierCtrl.newSupplier()">New</button>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table st-table="rawCollection" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Country</th>
+                    <th>Contact Person</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="supplier in supplierCtrl.global.suppliers">
+                    <td>{{supplier._id}}</td>
+                    <td>{{supplier.nickName}}</td>
+                    <td>{{supplier.country}}</td>
+                    <td>{{supplier.contactPerson.firstName + " " + supplier.contactPerson.lastName}}</td>
+                    <td><button type="button" class="btn btn-primary btn-sm" ng-click="supplierCtrl.openDetails(supplier._id)">More Details</button></td>
+                    <td>
+                        <button type="button" class="btn btn-danger" ng-click="supplierCtrl.confirmDeletion(supplier._id)">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

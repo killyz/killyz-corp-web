@@ -1,0 +1,56 @@
+<div ng-controller="SupplierController as supplierCtrl">
+    <div class="modal-header">
+        <h4>New Supplier</h4>
+    </div>
+    <form ng-submit="supplierCtrl.submit()">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Supplier Details:</label>
+                        <h5>Name</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.nickName">
+                    </div>
+                    <div class="form-group">
+                        <h5>Full Name</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.fullName">
+                    </div>
+                    <div class="form-group">
+                        <h5>Country</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.country">
+                    </div>
+                    <div class="form-group">
+                        <h5>Website</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.website">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Contact Person:</label>
+                    </div>
+                    <div class="form-group">
+                        <h5>First Name</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.contactPerson.firstName">
+                    </div>
+                    <div class="form-group">
+                        <h5>Last Name</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.contactPerson.lastName">
+                    </div>
+                    <div class="form-group">
+                        <h5>Email</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.contactPerson.email">
+                    </div>
+                    <div class="form-group">
+                        <h5>Phone Number</h5>
+                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.contactPerson.phoneNumber">
+                    </div></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="col-md-12 button-footer">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" ng-click="supplierCtrl.closeModal()">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

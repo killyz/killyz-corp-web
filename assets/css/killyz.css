@@ -1,0 +1,31 @@
+.header {
+    display: table;
+    height: 60px;
+}
+
+.header-child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.new-button-div {
+    text-align: right;
+    line-height: 60px;
+    height: 60px;
+}
+
+#new-supplier-footer {
+    text-align: center;
+}
+
+.button-footer {
+    text-align: center;
+}
+
+.details-modal {
+    width: 700px;
+}
+
+.modal-row {
+    padding-bottom: 10px;
+}

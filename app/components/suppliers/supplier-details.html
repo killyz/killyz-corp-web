@@ -1,0 +1,34 @@
+<div ng-controller="SupplierController as supplierCtrl">
+    <div class="modal-header">
+        <h4>{{supplierCtrl.global.currentSupplier.nickName}} - Inforamtion</h4>
+    </div>
+    <div class="modal-body">
+        <div class="modal-row">
+            <label>Name: </label>{{supplierCtrl.global.currentSupplier.nickName}}
+        </div>
+        <div class="modal-row">
+            <label>Full Name: </label>{{supplierCtrl.global.currentSupplier.fullName}}
+        </div>
+        <div class="modal-row">
+            <label>Country: </label>{{supplierCtrl.global.currentSupplier.country}}
+        </div>
+        <div class="modal-row">
+            <label>Website: </label>{{supplierCtrl.global.currentSupplier.website}}
+        </div>
+        <div class="modal-row">
+            <label>Contact Person: </label>
+        </div>
+        <div class="modal-row">
+            <label>Name: </label>{{supplierCtrl.global.currentSupplier.contactPerson.firstName + " " + supplierCtrl.global.currentSupplier.contactPerson.lastName}}
+        </div>
+        <div class="modal-row">
+            <label>Email: </label>{{supplierCtrl.global.currentSupplier.contactPerson.email}}
+        </div>
+        <div class="modal-row">
+            <label>Phone Number: </label>{{supplierCtrl.global.currentSupplier.contactPerson.phoneNumber}}
+        </div>
+    </div>
+    <div class="modal-footer button-footer">
+        <button type="button" class="btn btn-default" ng-click="supplierCtrl.closeModal()">Close</button>
+    </div>
+</div>

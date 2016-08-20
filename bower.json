@@ -1,0 +1,23 @@
+{
+  "name": "killyz-corp-web",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "angular-animate": "^1.5.7",
+    "angular-touch": "^1.5.7",
+    "bootstrap": "^3.3.6",
+    "angular-bootstrap": "^1.3.3",
+    "ng-country-select": "^0.1.4"
+  }
+}
