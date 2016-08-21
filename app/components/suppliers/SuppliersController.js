@@ -7,7 +7,7 @@
     function supplierController(SupplierService, $uibModal, $uibModalStack, $rootScope) {
         var vm = this;
         vm.global = $rootScope;
-        vm.supplier = {};
+        // vm.supplier = {};
         vm.modalInstance = {};
         getSuppliers();
         
