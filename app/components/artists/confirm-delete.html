@@ -1,0 +1,14 @@
+<div ng-controller="ArtistController as artCtrl">
+    <div class="modal-header">
+        <h4>Delete Artist</h4>
+    </div>
+    <div class="modal-body">
+        Are you sure you want to delete this artist?
+    </div>
+    <div class="modal-footer">
+        <div class="col-md-12 button-footer">
+            <button type="submit" class="btn btn-success" ng-click="artCtrl.deleteArtist()">Confirm</button>
+            <button type="submit" class="btn btn-danger" ng-click="artCtrl.closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>

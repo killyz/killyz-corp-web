@@ -7,7 +7,7 @@
     function supplierController(SupplierService, $uibModal, $uibModalStack, $rootScope) {
         var vm = this;
         vm.global = $rootScope;
-        // vm.supplier = {};
+        vm.supplier = {};
         vm.modalInstance = {};
         getSuppliers();
         
@@ -51,7 +51,7 @@
         vm.confirmDeletion = function (data) {
             vm.global.supplierToDelete = data;
             vm.modalInstance = $uibModal.open({
-               templateUrl: 'app/components/suppliers/delete-confirmation.html'
+               templateUrl: 'app/components/suppliers/confirm-delete.html'
             });
         };
         

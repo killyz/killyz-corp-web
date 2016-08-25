@@ -14,13 +14,12 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Preview</th>
-                    <th>Artist</th>
+                    <th>ID</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="model in modelsCtrl.global.models">
-                    <td>{{model.imageUrl}}</td>
+                    <td>{{model._id}}</td>
                 </tr>
                 </tbody>
             </table>

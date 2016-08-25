@@ -4,7 +4,7 @@
 
     app.controller('ModelsController', modelsController);
 
-    function modelsController(ModelsService, $rootScope) {
+    function modelsController(ModelsService, $rootScope, $uibModal, $uibModalStack) {
         var vm = this;
         vm.global = $rootScope;
         getModels();
@@ -18,6 +18,12 @@
                 throw error;
             });
         }
+
+        vm.newModel = function () {
+            vm.modalInstance = $uibModal.open({
+                templateUrl: 'app/components/models/new-model.html'
+            });
+        };
     }
 
 })();

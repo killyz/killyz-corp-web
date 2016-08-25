@@ -1,0 +1,35 @@
+<div ng-controller="ArtistController as artCtrl">
+    <div class="modal-header">
+        <h4>New Artist</h4>
+    </div>
+    <form ng-submit="artCtrl.submit()">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h5>First Name</h5>
+                        <input class="form-control" type="text" ng-model="artCtrl.artist.firstName">
+                    </div>
+                    <div class="form-group">
+                        <h5>Last Name</h5>
+                        <input class="form-control" type="text" ng-model="artCtrl.artist.lastName">
+                    </div>
+                    <div class="form-group">
+                        <h5>Email</h5>
+                        <input class="form-control" type="text" ng-model="artCtrl.artist.email">
+                    </div>
+                    <div class="form-group">
+                        <h5>Portfolio</h5>
+                        <input class="form-control" type="text" ng-model="artCtrl.artist.portfolio">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="col-md-12 button-footer">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" ng-click="artCtrl.closeModal()">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div ng-controller="ModelsController as modelCtrl">
+    <div class="modal-header">
+        <h4>New Model</h4>
+    </div>
+    <form ng-submit="modelCtrl.submit()">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h5>Artist</h5>
+                        <input class="form-control" type="text" ng-model="artCtrl.artist.firstName">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="col-md-12 button-footer">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" ng-click="modelCtrl.closeModal()">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

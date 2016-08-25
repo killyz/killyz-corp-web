@@ -34,6 +34,11 @@
                 templateUrl: "app/components/suppliers/suppliers.html"
             })
 
+            .state('artists', {
+                url: '/artists',
+                templateUrl: "app/components/artists/artists.html"
+            })
+
             .state('category-tree', {
                 url: '/category-tree',
                 templateUrl: "app/components/category-tree/category-tree.html"

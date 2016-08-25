@@ -1,0 +1,41 @@
+<div class="container-fluid" ng-controller="ArtistController as artCtrl">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7 header"><h3 class="header-child">Artists</h3></div>
+        <div class="col-md-1 new-button-div">
+            <span>
+                <button type="button" class="btn btn-success btn-sm" ng-click="artCtrl.newArtist()">New</button>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Portfolio</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="artist in artCtrl.global.artists">
+                    <td>{{artist._id}}</td>
+                    <td>{{artist.firstName + " " + artist.lastName}}</td>
+                    <td>{{artist.email}}</td>
+                    <td><a href="{{artist.portfolio}}"></a>Link to Portfolio</td>
+                    <td>
+                        <button type="button" class="btn btn-danger" ng-click="artCtrl.confirmDeletion(artist._id)">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
