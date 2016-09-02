@@ -25,6 +25,12 @@
                 var artistData = JSON.stringify({_id:data});
                 d.resolve($http.post("http://localhost:8080/killyz-api/artist/delete", artistData, config));
                 return d.promise;
+            },
+            
+            getAllArtistNames: function () {
+                var d = $q.defer();
+                d.resolve($http.get("http://localhost:8080/killyz-api/artist/getAllNames"));
+                return d.promise;
             }
         }
     }

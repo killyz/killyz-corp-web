@@ -4,16 +4,23 @@
 
     app.controller('ModelsController', modelsController);
 
-    function modelsController(ModelsService, $rootScope, $uibModal, $uibModalStack) {
+    function modelsController(ModelsService, $rootScope, $uibModal, $uibModalStack, ArtistService) {
         var vm = this;
         vm.global = $rootScope;
         getModels();
+        getArtistNames();
 
         function getModels() {
-            console.log('fetching');
             ModelsService.getAllModels().then(function success(response) {
                 vm.global.models = response.data;
-                console.log(response);
+            }, function error(error) {
+                throw error;
+            });
+        }
+
+        function getArtistNames() {
+            ArtistService.getAllArtistNames().then(function success(response) {
+                vm.global.artistNames = response.data;
             }, function error(error) {
                 throw error;
             });

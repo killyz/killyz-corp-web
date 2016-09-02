@@ -8,6 +8,8 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Supplier Details:</label>
+                    </div>
+                    <div class="form-group">
                         <h5>Name</h5>
                         <input class="form-control" type="text" ng-model="supplierCtrl.supplier.nickName">
                     </div>
@@ -15,9 +17,13 @@
                         <h5>Full Name</h5>
                         <input class="form-control" type="text" ng-model="supplierCtrl.supplier.fullName">
                     </div>
+                    <!--<div class="form-group">-->
+                        <!--<h5>Country</h5>-->
+                        <!--<input class="form-control" type="text" ng-model="supplierCtrl.supplier.country">-->
+                    <!--</div>-->
                     <div class="form-group">
                         <h5>Country</h5>
-                        <input class="form-control" type="text" ng-model="supplierCtrl.supplier.country">
+                        <select class="form-control" ng-options="country.name for country in supplierCtrl.countries" ng-model="supplierCtrl.country"></select>
                     </div>
                     <div class="form-group">
                         <h5>Website</h5>
@@ -43,7 +49,8 @@
                     <div class="form-group">
                         <h5>Phone Number</h5>
                         <input class="form-control" type="text" ng-model="supplierCtrl.supplier.contactPerson.phoneNumber">
-                    </div></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="modal-footer">

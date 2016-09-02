@@ -22,11 +22,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="artist in artCtrl.global.artists">
+                <tr ng-repeat="artist in artCtrl.global.artists | orderBy: 'firstName'">
                     <td>{{artist._id}}</td>
                     <td>{{artist.firstName + " " + artist.lastName}}</td>
                     <td>{{artist.email}}</td>
-                    <td><a href="{{artist.portfolio}}"></a>Link to Portfolio</td>
+                    <td><a href="{{artist.portfolio}}" target="_blank">Portfolio</a></td>
                     <td>
                         <button type="button" class="btn btn-danger" ng-click="artCtrl.confirmDeletion(artist._id)">
                             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
